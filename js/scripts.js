@@ -5,7 +5,7 @@
 */
 //
 // Scripts
-// 
+//
 
 window.addEventListener('DOMContentLoaded', event => {
 
@@ -23,7 +23,7 @@ window.addEventListener('DOMContentLoaded', event => {
 
     };
 
-    // Shrink the navbar 
+    // Shrink the navbar
     navbarShrink();
 
     // Shrink the navbar when page is scrolled
@@ -51,4 +51,30 @@ window.addEventListener('DOMContentLoaded', event => {
         });
     });
 
+    // Custom script to toggle portfolio items - Updated
+    const toggleButton = document.getElementById('togglePortfolioBtn');
+    const moreItemsContainer = document.getElementById('more-portfolio-items');
+    const toggleButtonText = document.getElementById('toggleButtonText');
+    const arrowDown = document.getElementById('arrowDown');
+    const arrowUp = document.getElementById('arrowUp');
+
+    toggleButton.addEventListener('click', () => {
+        // '더보기' 버튼 상태일 때
+        if (moreItemsContainer.classList.contains('d-none')) {
+            moreItemsContainer.classList.remove('d-none');
+            toggleButtonText.textContent = '숨기기';
+            arrowDown.style.display = 'none';
+            arrowUp.style.display = 'block';
+            arrowUp.classList.add('rotate');
+            setTimeout(() => arrowUp.classList.remove('rotate'), 400);
+        // '숨기기' 버튼 상태일 때
+        } else {
+            moreItemsContainer.classList.add('d-none');
+            toggleButtonText.textContent = '더보기';
+            arrowUp.style.display = 'none';
+            arrowDown.style.display = 'block';
+            arrowDown.classList.add('rotate');
+            setTimeout(() => arrowDown.classList.remove('rotate'), 400);
+        }
+    });
 });
