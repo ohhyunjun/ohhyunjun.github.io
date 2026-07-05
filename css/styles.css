@@ -11303,3 +11303,321 @@ footer.footer h4 {
 .rotate {
   transform: rotate(180deg) scale(1.08);
 }
+
+/* 탭(Tab) 활성화 스타일 커스텀 */
+.nav-tabs .nav-link {
+    color: var(--bs-secondary); /* 기본 글자색 (어두운 남색) */
+    border: none;
+    border-bottom: 3px solid transparent;
+}
+
+.nav-tabs .nav-link:hover {
+    border-color: transparent;
+    color: var(--bs-primary); /* 호버 시 메인 블루 색상 */
+}
+
+.nav-tabs .nav-link.active {
+    color: var(--bs-primary) !important;
+    background-color: transparent !important;
+    border: none;
+    border-bottom: 3px solid var(--bs-primary); /* 활성화 탭 하단에 파란색 밑줄 포인트 */
+}
+
+
+/* ===== Portfolio Modal Inner UI – Brand-matched dark theme ===== */
+
+/* Container Query 기준점 */
+.project-modal-layout {
+    text-align: left;
+    container-type: inline-size;
+    container-name: modal-layout;
+}
+
+/* 통합 카드 */
+.project-combined-card {
+    border: 1px solid rgba(91, 127, 255, 0.3);
+    border-radius: 1rem;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(6px);
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    margin-bottom: 1.25rem;
+}
+
+/* 이미지 패널 */
+.project-image-panel {
+    width: 260px;
+    min-width: 260px;
+    background: rgba(0, 0, 0, 0.3);
+    border-right: 1px solid rgba(91, 127, 255, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem;
+}
+
+.project-hero-image {
+    width: 100%;
+    max-height: 220px;
+    object-fit: contain;
+    display: block;
+}
+
+/* PLANTI 전용 - 세로형 이미지 */
+.project-image-panel--tall {
+    width: 200px;
+    min-width: 200px;
+    min-height: 340px;
+}
+.project-image-panel--tall .project-hero-image {
+    max-height: 320px;
+}
+
+.project-overview-body {
+    flex: 1;
+    min-width: 0;
+    padding: 1.4rem 1.6rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.project-overview-body p {
+    color: #ccd6f6 !important;
+    margin-bottom: 0.6rem;
+    font-size: 0.93rem;
+    line-height: 1.65;
+}
+
+.project-overview-body p:last-child {
+    margin-bottom: 0;
+}
+
+/* 컨테이너 560px 이하 → 세로 전환 */
+@container modal-layout (max-width: 560px) {
+    .project-combined-card {
+        flex-direction: column;
+    }
+    .project-image-panel {
+        width: 100%;
+        min-width: 0;
+        border-right: none;
+        border-bottom: 1px solid rgba(91, 127, 255, 0.2);
+        padding: 1rem 2rem;
+        max-height: 180px;
+    }
+    .project-hero-image {
+        max-height: 140px;
+    }
+    .project-image-panel--tall {
+        min-height: 260px;
+        max-height: 260px;
+    }
+    .project-image-panel--tall .project-hero-image {
+        max-height: 240px;
+    }
+}
+
+/* 섹션 타이틀 */
+.project-section-title {
+    color: var(--main-blue) !important;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+}
+
+/* 탭 네비게이션 */
+.project-tabs {
+    border-bottom: 2px solid rgba(91, 127, 255, 0.2);
+}
+
+.project-tabs .nav-link {
+    color: #ccd6f6;
+    font-weight: 600;
+    border-radius: 0.5rem 0.5rem 0 0;
+    border: none;
+    padding: 0.6rem 1.2rem;
+    background: transparent;
+    transition: color 0.15s, background 0.15s;
+}
+
+.project-tabs .nav-link:hover {
+    color: var(--neon-pink);
+    background: rgba(255, 88, 166, 0.08);
+    border-color: transparent;
+}
+
+.project-tabs .nav-link.active {
+    color: #fff !important;
+    background: linear-gradient(90deg, var(--main-blue), var(--neon-pink) 180%);
+    border: none !important;
+    border-radius: 0.5rem 0.5rem 0 0;
+}
+
+/* 탭 컨텐츠 패널 */
+.project-tab-panel {
+    border: 1px solid rgba(91, 127, 255, 0.2);
+    border-top: 0;
+    border-radius: 0 0 1rem 1rem;
+    padding: 1.5rem;
+    background: rgba(255, 255, 255, 0.03);
+    min-height: 180px;
+}
+
+.project-tab-panel p {
+    color: #ccd6f6 !important;
+}
+
+/* 비디오 & PDF 박스 */
+.project-video-box,
+.project-pdf-box {
+    overflow: hidden;
+    border-radius: 0.75rem;
+    border: 1px solid rgba(91, 127, 255, 0.25);
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.project-video-box video,
+.project-video-box iframe,
+.project-pdf-box iframe {
+    width: 100%;
+    display: block;
+    border: 0;
+}
+
+.project-video-box video {
+    max-height: 420px;
+}
+
+.project-video-box iframe {
+    height: 420px;
+    aspect-ratio: 16 / 9;
+}
+
+/* 영상 2열 나란히 레이아웃 */
+.project-video-dual {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.project-video-dual .project-video-box video {
+    max-height: 260px;
+}
+
+/* PDF 박스 */
+.project-pdf-box {
+    position: relative;
+    width: 100%;
+    border-radius: 0.75rem;
+    border: 1px solid rgba(91, 127, 255, 0.25);
+    background: rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+}
+
+.project-pdf-box iframe {
+    width: 100%;
+    height: 520px;
+    display: block;
+    border: 0;
+}
+
+/* 리소스 카드 그리드 */
+.project-link-grid,
+.project-doc-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 0.75rem;
+}
+
+/* 리소스 카드 */
+.project-resource-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.75rem;
+    padding: 0.9rem 1rem;
+    border: 1px solid rgba(91, 127, 255, 0.3);
+    border-radius: 0.75rem;
+    color: #ccd6f6;
+    background: rgba(255, 255, 255, 0.05);
+    text-decoration: none;
+    font-weight: 600;
+    transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s, color 0.15s;
+}
+
+.project-resource-card:hover {
+    color: var(--neon-pink);
+    border-color: var(--neon-pink);
+    transform: translateY(-2px);
+    box-shadow: 0 0.35rem 1rem rgba(255, 88, 166, 0.2);
+}
+
+/* 빈 상태 플레이스홀더 */
+.project-empty {
+    color: #8b9dc0;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 0.75rem;
+    padding: 1rem;
+    margin-bottom: 0;
+    border: 1px dashed rgba(91, 127, 255, 0.2);
+}
+
+.project-empty code {
+    color: var(--neon-pink);
+}
+
+/* 모달 서브타이틀 */
+.portfolio-modal .text-muted {
+    color: #8b9dc0 !important;
+}
+
+/* PDF 전환 버튼 */
+.pdf-switcher {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.pdf-switch-btn {
+    padding: 0.35rem 1rem;
+    border-radius: 2rem;
+    border: 1px solid rgba(91, 127, 255, 0.4);
+    background: transparent;
+    color: #ccd6f6;
+    font-size: 0.85rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.15s, color 0.15s, border-color 0.15s;
+    font-family: inherit;
+}
+
+.pdf-switch-btn.active,
+.pdf-switch-btn:hover {
+    background: linear-gradient(90deg, var(--main-blue), var(--neon-pink) 180%);
+    color: #fff;
+    border-color: transparent;
+}
+
+/* 반응형 */
+@media (max-width: 768px) {
+    .project-video-box iframe {
+        height: 280px;
+    }
+    .project-pdf-box iframe {
+        height: 400px;
+    }
+    .project-video-dual {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .project-pdf-box iframe {
+        height: 300px;
+    }
+}

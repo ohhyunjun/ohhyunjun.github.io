@@ -13,6 +13,16 @@
     <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet"
         type="text/css" />
     <link href="css/styles.css" rel="stylesheet" />
+
+
+    <script>
+        function switchPdf(btn, src, frameId) {
+            document.getElementById(frameId).src = src;
+            btn.closest('.pdf-switcher').querySelectorAll('.pdf-switch-btn').forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+        }
+    </script>
+
 </head>
 
 <body id="page-top">
@@ -39,14 +49,14 @@
     </nav>
     <header class="masthead bg-primary text-white text-center">
         <div class="container d-flex align-items-center flex-column">
-            <img class="masthead-avatar mb-5" src="assets/img/avataaars.png" alt="..." />
+            <img class="masthead-avatar mb-5" src="assets/img/avataaars.jpg" alt="..." />
             <h1 class="masthead-heading text-uppercase mb-0">Making Ideas Real</h1>
             <div class="divider-custom divider-light">
                 <div class="divider-custom-line"></div>
                 <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
                 <div class="divider-custom-line"></div>
             </div>
-            <p class="masthead-subheading font-weight-light mb-0">Backend Developer - Server Administrator</p>
+            <p class="masthead-subheading font-weight-light mb-0">Backend Developer · IoT & AI System Builder</p>
         </div>
     </header>
     <section class="page-section portfolio" id="portfolio">
@@ -121,7 +131,7 @@
                             <div class="portfolio-item-caption-content text-center text-white"><i
                                     class="fas fa-plus fa-3x"></i></div>
                         </div>
-                        <img class="img-fluid" src="assets/img/portfolio/schoolmap.png" alt="..." />
+                        <img class="img-fluid" src="assets/img/portfolio/fishshell.png" alt="..." />
                     </div>
                 </div>
             </div>
@@ -136,6 +146,39 @@
                                     class="fas fa-plus fa-3x"></i></div>
                         </div>
                         <img class="img-fluid" src="assets/img/portfolio/smartblind.png" alt="..." />
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 mb-4 mb-md-0">
+                    <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal8"
+                        style="max-width: 300px;">
+                        <div
+                            class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                            <div class="portfolio-item-caption-content text-center text-white"><i
+                                    class="fas fa-plus fa-3x"></i></div>
+                        </div>
+                        <img class="img-fluid" src="assets/img/portfolio/planti.png" alt="Project 8" />
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 mb-4 mb-md-0">
+                    <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal9"
+                        style="max-width: 300px;">
+                        <div
+                            class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                            <div class="portfolio-item-caption-content text-center text-white"><i
+                                    class="fas fa-plus fa-3x"></i></div>
+                        </div>
+                        <img class="img-fluid" src="assets/img/portfolio/project9.png" alt="Project 9" />
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 mb-4 mb-md-0">
+                    <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal10"
+                        style="max-width: 300px;">
+                        <div
+                            class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                            <div class="portfolio-item-caption-content text-center text-white"><i
+                                    class="fas fa-plus fa-3x"></i></div>
+                        </div>
+                        <img class="img-fluid" src="assets/img/portfolio/project10.png" alt="Project 10" />
                     </div>
                 </div>
             </div>
@@ -175,14 +218,15 @@
                     <p class="lead">이름: 오현준</p>
                     <p class="lead">학번: C089038</p>
                     <p class="lead">전공: 소프트웨어융합학과</p>
-                    <p class="lead">학년: 3학년</p>
+                    <p class="lead">학년: 4학년</p>
                     <p class="lead">MBTI: INFJ</p>
                 </div>
                 <div class="col-lg-4">
                     <p class="lead"></br></p>
-                    <p class="lead">언어: 자바, 파이썬, 웹프로그래밍</p>
+                    <p class="lead">기술: Java · Spring Boot · Python · Arduino · React · YOLOv11 · OpenCV · Linux</p>
+                    <p class="lead">자격증: SQLD · 정보처리기사(필기) · ITQ한글 A</p>
                     <p class="lead">취미: 게임, 영화보기</p>
-                    <p class="lead">관심분야: 웹서버개발 및 데이터관리 분야.</p>
+                    <p class="lead">관심분야: 백엔드 개발 · 데이터 설계 · IoT 시스템</p>
                 </div>
             </div>
         </div>
@@ -278,284 +322,792 @@
     <div class="copyright py-4 text-center text-white">
         <div class="container"><small>Copyright &copy; Hyunjun Oh</small></div>
     </div>
-    <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" aria-labelledby="portfolioModal1"
+    <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" aria-labelledby="portfolioModalLabel1"
         aria-hidden="true">
         <div class="modal-dialog modal-xl">
             <div class="modal-content">
                 <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal"
                         aria-label="Close"></button></div>
-                <div class="modal-body text-center pb-5">
+                <div class="modal-body pb-5">
                     <div class="container">
-                        <div class="row justify-content-center">
-                            <div class="col-lg-8">
-                                <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">HERV</h2>
-                                <div class="divider-custom">
-                                    <div class="divider-custom-line"></div>
-                                    <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
-                                    <div class="divider-custom-line"></div>
-                                </div>
-                                <img class="img-fluid rounded mb-5" src="assets/img/portfolio/herv.png" alt="..." />
-                                <p class="mb-4" style="text-align: left;">
-                                    HERV 동아리에서 미세먼지, 빗물, 조도 센서로 주변 환경을 감지해 창문을 자동 제어하는 스마트 시스템을 제작했습니다. 이 시스템은 외부 유해물질
-                                    유입을 막거나 날씨 변화, 실내 밝기에 대응하여 쾌적하고 안전한 실내 환경을 자동으로 조성합니다.
-                                </p>
-                                <p class="mb-4" style="text-align: left;">
-                                    아두이노를 기반으로 모터와 톱니바퀴를 이용한 개폐 장치를 구현했으며, 저는 프로젝트에서 미세먼지 센서의 회로 구성과 코딩을 주로 담당했습니다. 또한,
-                                    전체 시스템의 최종 코드를 디버깅하며 안정성을 높이는 역할을 맡아 실질적인 문제 해결 능력을 기를 수 있었습니다.
-                                </p>
-                                <p class="mb-4" style="text-align: left;">
-                                    이 경험은 코딩과 회로 설계를 아우르는 통합적인 문제 해결 능력을 길러주었으며, 아이디어를 하드웨어 프로토타입으로 완성하는 전체 사이클을 깊이 이해하는
-                                    계기가 되었습니다.
-                                </p>
-                                <button class="btn btn-primary" data-bs-dismiss="modal">
-                                    <i class="fas fa-xmark fa-fw"></i>
-                                    Close Window
-                                </button>
+                        <div class="text-center">
+                            <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0" id="portfolioModalLabel1">HERV</h2>
+                            <p class="text-muted mt-2 mb-0">Arduino · Sensor · Hardware</p>
+                            <div class="divider-custom">
+                                <div class="divider-custom-line"></div>
+                                <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                                <div class="divider-custom-line"></div>
                             </div>
                         </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" aria-labelledby="portfolioModal2"
-        aria-hidden="true">
-        <div class="modal-dialog modal-xl">
-            <div class="modal-content">
-                <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal"
-                        aria-label="Close"></button></div>
-                <div class="modal-body text-center pb-5">
-                    <div class="container">
-                        <div class="row justify-content-center">
-                            <div class="col-lg-8">
-                                <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">GITHUB</h2>
-                                <div class="divider-custom">
-                                    <div class="divider-custom-line"></div>
-                                    <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
-                                    <div class="divider-custom-line"></div>
-                                </div>
-                                <a href="https://github.com/ohhyunjun" target="_blank">
-                                    <img class="img-fluid rounded mb-5" src="assets/img/portfolio/github.png"
-                                        alt="GitHub 바로가기" />
-                                </a>
-                                <p class="mb-4" style="text-align: left;">
-                                    GitHub에 지속적으로 학부시절 배운 수업내용과 개인공부를 지속적으로 정리하며 올려왔습니다.
-                                </p>
-                                <p class="mb-4" style="text-align: left;">
-                                    (이미지 클릭시 사이트로 이동합니다.)
-                                </p>
-                                <button class="btn btn-primary" data-bs-dismiss="modal">
-                                    <i class="fas fa-xmark fa-fw"></i>
-                                    Close Window
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" aria-labelledby="portfolioModal3"
-        aria-hidden="true">
-        <div class="modal-dialog modal-xl">
-            <div class="modal-content">
-                <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal"
-                        aria-label="Close"></button></div>
-                <div class="modal-body text-center pb-5">
-                    <div class="container">
-                        <div class="row justify-content-center">
-                            <div class="col-lg-8">
-                                <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">TISTORY</h2>
-                                <div class="divider-custom">
-                                    <div class="divider-custom-line"></div>
-                                    <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
-                                    <div class="divider-custom-line"></div>
-                                </div>
-                                <a href="https://ohhyunjun712.tistory.com/" target="_blank">
-                                    <img class="img-fluid rounded mb-5" src="assets/img/portfolio/tistory.png"
-                                        alt="..." />
-                                </a>
-                                <p class="mb-4" style="text-align: left;">
-                                    블로그를 운영중이며, 코딩테스트 일지와 메타버스 배운내용을 정리하여 올려왔습니다.
-                                </p>
-                                <p class="mb-4" style="text-align: left;">
-                                    (이미지 클릭시 사이트로 이동합니다.)
-                                </p>
-                                <button class="btn btn-primary" data-bs-dismiss="modal">
-                                    <i class="fas fa-xmark fa-fw"></i>
-                                    Close Window
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="portfolio-modal modal fade" id="portfolioModal4" tabindex="-1" aria-labelledby="portfolioModal4"
-        aria-hidden="true">
-        <div class="modal-dialog modal-xl">
-            <div class="modal-content">
-                <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal"
-                        aria-label="Close"></button></div>
-                <div class="modal-body text-center pb-5">
-                    <div class="container">
-                        <div class="row justify-content-center">
-                            <div class="col-lg-8">
-                                <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">DEEPLEARNING</h2>
-                                <div class="divider-custom">
-                                    <div class="divider-custom-line"></div>
-                                    <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
-                                    <div class="divider-custom-line"></div>
-                                </div>
-                                <a href="https://github.com/ohhyunjun/Machine-Learning/tree/main/Team%20Project" target="_blank">
-                                    <img class="img-fluid rounded mb-5" src="assets/img/portfolio/deeplearning.png"
-                                        alt="..." />
-                                </a>
-                                <p class="mb-4" style="text-align: left;">
-                                    날씨 빅데이터 콘테스트에서 '기상과 지하철 혼잡도 상관분석·예측'을 주제로 딥러닝을 제작해보았습니다.
-                                </p>
-                                <p class="mb-4" style="text-align: left;">
-                                    (이미지 클릭시 사이트로 이동합니다.)
-                                </p>
-                                <button class="btn btn-primary" data-bs-dismiss="modal">
-                                    <i class="fas fa-xmark fa-fw"></i>
-                                    Close Window
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="portfolio-modal modal fade" id="portfolioModal5" tabindex="-1" aria-labelledby="portfolioModal5"
-        aria-hidden="true">
-        <div class="modal-dialog modal-xl">
-            <div class="modal-content">
-                <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal"
-                        aria-label="Close"></button></div>
-                <div class="modal-body text-center pb-5">
-                    <div class="container">
-                        <div class="row justify-content-center">
-                            <div class="col-lg-8">
-                                <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">ICPC</h2>
-                                <div class="divider-custom">
-                                    <div class="divider-custom-line"></div>
-                                    <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
-                                    <div class="divider-custom-line"></div>
-                                </div>
-                                 <a href="https://github.com/ohhyunjun/Algorithm-Design-Challenges" target="_blank">
-                                    <img class="img-fluid rounded mb-5" src="assets/img/portfolio/ICPCLogo.png"
-                                        alt="..." />
-                                </a>
-                                <p class="mb-4" style="text-align: left;">
-                                    ICPC에서
-                                </p>
-                                <p class="mb-4" style="text-align: left;">
-                                    (이미지 클릭시 사이트로 이동합니다.)
-                                </p>
-                                <button class="btn btn-primary" data-bs-dismiss="modal">
-                                    <i class="fas fa-xmark fa-fw"></i>
-                                    Close Window
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="portfolio-modal modal fade" id="portfolioModal6" tabindex="-1" aria-labelledby="portfolioModal6"
-        aria-hidden="true">
-        <div class="modal-dialog modal-xl">
-            <div class="modal-content">
-                <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal"
-                        aria-label="Close"></button></div>
-                <div class="modal-body text-center pb-5">
-                    <div class="container">
-                        <div class="row justify-content-center">
-                            <div class="col-lg-8">
-                                <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Website Project
-                                </h2>
-                                <div class="divider-custom">
-                                    <div class="divider-custom-line"></div>
-                                    <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
-                                    <div class="divider-custom-line"></div>
-                                </div>
-                                <img class="img-fluid rounded mb-5" src="assets/img/portfolio/image.png"
-                                    alt="..." />
-                                <p class="mb-4" style="text-align: left;">
-                                    학교 지도를 제공하는 사이트를 제작하고 싶습니다. <br>
-                                    단순히 학교 지도를 제공하는 것이 아닌 Blender를 활용한 3D 모델링 기반의 학교 지도를 제작하고자 합니다. 사용자는 3D 지도를 자유롭게
-                                    회전·확대·축소하며 각 건물과 경로를 직관적으로 탐색할 수 있습니다.
-                                    <br><br>
-                                    또한 학교 주변의 카페, 식당, 복사실, 편의점 등 주요 편의시설이나 명소에 대한 정보도 지도 내에서 바로 확인할 수 있으며, 특정 위치를 클릭하면
-                                    로드뷰처럼 실제로 촬영된 360도 사진이 제공되어 공간을 한눈에 이해할 수 있게 정보를 제공하고 싶습니다. 이는 나아가 다양한 대학교들을 추가하며
-                                    확장할 수 있으리라 생각합니다.
-                                </p>
-                                <p class="mb-4" style="text-align: left;">
-                                    ()
-                                </p>
-                                <button class="btn btn-primary" data-bs-dismiss="modal">
-                                    <i class="fas fa-xmark fa-fw"></i>
-                                    Close Window
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="portfolio-modal modal fade" id="portfolioModal7" tabindex="-1" aria-labelledby="portfolioModal7"
-        aria-hidden="true">
-        <div class="modal-dialog modal-xl">
-            <div class="modal-content">
-                <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal"
-                        aria-label="Close"></button></div>
-                <div class="modal-body text-center pb-5">
-                    <div class="container">
-                        <div class="row justify-content-center">
-                            <div class="col-lg-8">
-                                <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Automated Fine Dust-Blocking Blinds</h2>
-                                <div class="divider-custom">
-                                    <div class="divider-custom-line"></div>
-                                    <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
-                                    <div class="divider-custom-line"></div>
-                                </div>
-                                <img class="img-fluid rounded mb-5" src="assets/img/portfolio/smartblind_img2.png" alt="..." />
-                                <p class="mb-4" style="text-align: left;">
-                                    팀 B조 KKOY의 “미세먼지 차단 자동 블라인드” 프로젝트는
-                                    블라인드에 방충망과 필터 천을 결합하고,
-                                    미세먼지·온습도 센서로 실시간 데이터를 수집·시각화하여
-                                    기준 농도(나쁨) 이상 시 자동으로 블라인드를 제어하는 시스템입니다.
-                                    1~2주차에 부품 선정과 모형 제작을 완료했고,
-                                    3주차부터 센서·모터 회로 설계 및 아두이노 코딩을 병행했으며,
-                                    서보모터 개조로 360° 회전을 가능케 해 최종 주차에 프로토타입을 완성했습니다.
-                                </p>
-                                <p class="mb-4" style="text-align: left;">
-                                    이 과정을 통해 저는 아두이노 코딩을 담당하며
-                                    기술적 한계에 부딪혔을 때 문제를 세분화하고,
-                                    팀원들과 협의하여 대체 방안을 실험해보는 융합적 사고의 중요성을 깨달았습니다.
-                                    일정 지연과 부품 수급 문제를 유연하게 관리하면서
-                                    프로젝트 리더십과 커뮤니케이션 역량도 크게 향상되었습니다.
-                                    또한, 실제 환경 데이터를 기반으로 자동 제어 작동 로직을 구현한 경험은
-                                    앞으로 스마트 홈·IoT 분야에서 보다 정교한 시스템을 설계하는 데
-                                    든든한 밑거름이 될 것입니다.
-                                </p>
 
-                                <button class="btn btn-primary" data-bs-dismiss="modal">
-                                    <i class="fas fa-xmark fa-fw"></i>
-                                    Close Window
-                                </button>
-                            </div>
+                        <div class="project-modal-layout">
+                            <div class="project-combined-card mb-4">
+                                    <div class="project-image-panel">
+                                        <img class="project-hero-image" src="assets/img/portfolio/herv.png" alt="HERV 대표 이미지" />
+                                    </div>
+                                    <div class="project-overview-body">
+                                        <h5 class="project-section-title">Project Overview</h5>
+                                            <p class="mb-3">HERV 동아리에서 미세먼지, 빗물, 조도 센서로 주변 환경을 감지해 창문을 자동 제어하는 스마트 시스템을 제작했습니다. 외부 유해물질 유입을 막거나 날씨 변화, 실내 밝기에 대응하여 쾌적하고 안전한 실내 환경을 자동으로 조성하는 것을 목표로 했습니다.</p>
+                                            <p class="mb-3">아두이노를 기반으로 모터와 톱니바퀴를 이용한 개폐 장치를 구현했으며, 저는 미세먼지 센서의 회로 구성과 코딩을 주로 담당했습니다. 또한 전체 시스템의 최종 코드를 디버깅하며 안정성을 높이는 역할을 맡았습니다.</p>
+                                            <p class="mb-3">이 경험을 통해 코딩과 회로 설계를 아우르는 통합적인 문제 해결 능력을 기를 수 있었고, 아이디어를 하드웨어 프로토타입으로 완성하는 전체 사이클을 이해하게 되었습니다.</p>
+                                    </div>
+                                </div>
+
+                            
+                        </div>
+
+                        <div class="text-center mt-5">
+                            <button class="btn btn-primary" data-bs-dismiss="modal">
+                                <i class="fas fa-xmark fa-fw"></i>
+                                Close Window
+                            </button>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+    <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" aria-labelledby="portfolioModalLabel2"
+        aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal"
+                        aria-label="Close"></button></div>
+                <div class="modal-body pb-5">
+                    <div class="container">
+                        <div class="text-center">
+                            <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0" id="portfolioModalLabel2">GITHUB</h2>
+                            <p class="text-muted mt-2 mb-0">Study Archive · Code Repository</p>
+                            <div class="divider-custom">
+                                <div class="divider-custom-line"></div>
+                                <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                                <div class="divider-custom-line"></div>
+                            </div>
+                        </div>
+
+                        <div class="project-modal-layout">
+                            <div class="project-combined-card mb-4">
+                                    <div class="project-image-panel">
+                                        <img class="project-hero-image" src="assets/img/portfolio/github.png" alt="GITHUB 대표 이미지" />
+                                    </div>
+                                    <div class="project-overview-body">
+                                        <h5 class="project-section-title">Project Overview</h5>
+                                            <p class="mb-3">GitHub에 학부 시절 배운 수업 내용과 개인 공부 내용을 지속적으로 정리하며 올려왔습니다.</p>
+                                            <p class="mb-3">단순히 결과 코드만 업로드하는 것이 아니라, 학습 과정과 프로젝트 기록을 남기는 용도로 활용하고 있습니다.</p>
+                                    </div>
+                                </div>
+
+                            <ul class="nav nav-tabs project-tabs" id="portfolioTab2" role="tablist">
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link active" id="links-tab-2" data-bs-toggle="tab" data-bs-target="#links-2" type="button" role="tab">Links</button>
+                                </li>
+                            </ul>
+
+                            <div class="tab-content project-tab-panel" id="portfolioTabContent2">
+                                <div class="tab-pane fade show active" id="links-2" role="tabpanel" aria-labelledby="links-tab-2">
+                                    <h5 class="project-section-title">Related Links</h5>
+                                            <div class="project-link-grid">
+                                                <a class="project-resource-card" href="https://github.com/ohhyunjun" target="_blank" rel="noopener">
+                                                    <span><i class="fas fa-link me-2"></i>GitHub Profile</span>
+                                                    <i class="fas fa-arrow-up-right-from-square"></i>
+                                                </a>
+                                            </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="text-center mt-5">
+                            <button class="btn btn-primary" data-bs-dismiss="modal">
+                                <i class="fas fa-xmark fa-fw"></i>
+                                Close Window
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" aria-labelledby="portfolioModalLabel3"
+        aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal"
+                        aria-label="Close"></button></div>
+                <div class="modal-body pb-5">
+                    <div class="container">
+                        <div class="text-center">
+                            <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0" id="portfolioModalLabel3">TISTORY</h2>
+                            <p class="text-muted mt-2 mb-0">Blog · Algorithm · Study Log</p>
+                            <div class="divider-custom">
+                                <div class="divider-custom-line"></div>
+                                <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                                <div class="divider-custom-line"></div>
+                            </div>
+                        </div>
+
+                        <div class="project-modal-layout">
+                            <div class="project-combined-card mb-4">
+                                    <div class="project-image-panel">
+                                        <img class="project-hero-image" src="assets/img/portfolio/tistory.png" alt="TISTORY 대표 이미지" />
+                                    </div>
+                                    <div class="project-overview-body">
+                                        <h5 class="project-section-title">Project Overview</h5>
+                                            <p class="mb-3">블로그를 운영하며 코딩테스트 일지와 메타버스 관련 학습 내용을 정리해왔습니다.</p>
+                                            <p class="mb-3">학습한 내용을 다시 설명 가능한 형태로 정리하면서 개념 이해도를 높이는 데 활용했습니다.</p>
+                                    </div>
+                                </div>
+
+                            <ul class="nav nav-tabs project-tabs" id="portfolioTab3" role="tablist">
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link active" id="links-tab-3" data-bs-toggle="tab" data-bs-target="#links-3" type="button" role="tab">Links</button>
+                                </li>
+                            </ul>
+
+                            <div class="tab-content project-tab-panel" id="portfolioTabContent3">
+                                <div class="tab-pane fade show active" id="links-3" role="tabpanel" aria-labelledby="links-tab-3">
+                                    <h5 class="project-section-title">Related Links</h5>
+                                            <div class="project-link-grid">
+                                                <a class="project-resource-card" href="https://ohhyunjun712.tistory.com/" target="_blank" rel="noopener">
+                                                    <span><i class="fas fa-link me-2"></i>Tistory Blog</span>
+                                                    <i class="fas fa-arrow-up-right-from-square"></i>
+                                                </a>
+                                            </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="text-center mt-5">
+                            <button class="btn btn-primary" data-bs-dismiss="modal">
+                                <i class="fas fa-xmark fa-fw"></i>
+                                Close Window
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="portfolio-modal modal fade" id="portfolioModal4" tabindex="-1" aria-labelledby="portfolioModalLabel4"
+        aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal"
+                        aria-label="Close"></button></div>
+                <div class="modal-body pb-5">
+                    <div class="container">
+                        <div class="text-center">
+                            <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0" id="portfolioModalLabel4">DEEPLEARNING</h2>
+                            <p class="text-muted mt-2 mb-0">AI · Time Series · GRU/LSTM</p>
+                            <div class="divider-custom">
+                                <div class="divider-custom-line"></div>
+                                <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                                <div class="divider-custom-line"></div>
+                            </div>
+                        </div>
+
+                        <div class="project-modal-layout">
+                            <div class="project-combined-card mb-4">
+                                    <div class="project-image-panel">
+                                        <img class="project-hero-image" src="assets/img/portfolio/deeplearning.png" alt="DEEPLEARNING 대표 이미지" />
+                                    </div>
+                                    <div class="project-overview-body">
+                                        <h5 class="project-section-title">Project Overview</h5>
+                                            <p class="mb-3">날씨 빅데이터 콘테스트의 과제인 '기상과 지하철 혼잡도 상관분석·예측'을 주제로 기획한 딥러닝 프로젝트입니다.</p>
+                                            <p class="mb-3">기상 변화가 대중교통 수요에 미치는 영향을 분석하여 1시간 뒤의 지하철 혼잡도를 예측하는 시계열 모델을 개발했습니다. 날씨마루 데이터를 정제하고 체감온도 등 파생 변수를 구축했으며, LSTM과 GRU 모델을 설계 및 비교했습니다.</p>
+                                            <p class="mb-3">최종적으로 튜닝을 거친 GRU 모델을 통해 Test RMSE 10.87의 예측 성능을 달성했습니다.</p>
+                                    </div>
+                                </div>
+
+                            <ul class="nav nav-tabs project-tabs" id="portfolioTab4" role="tablist">
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link active" id="docs-tab-4" data-bs-toggle="tab" data-bs-target="#docs-4" type="button" role="tab">Docs</button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="links-tab-4" data-bs-toggle="tab" data-bs-target="#links-4" type="button" role="tab">Links</button>
+                                </li>
+                            </ul>
+
+                            <div class="tab-content project-tab-panel" id="portfolioTabContent4">
+                                <div class="tab-pane fade show active" id="docs-4" role="tabpanel" aria-labelledby="docs-tab-4">
+                                    <h5 class="project-section-title">Documents</h5>
+                                            <div class="project-doc-grid mb-3">
+                                                <a class="project-resource-card" href="assets/docs/11조_최종발표.pdf" target="_blank" rel="noopener">
+                                                    <span><i class="fas fa-file-pdf me-2"></i>프로젝트 보고서</span>
+                                                    <i class="fas fa-arrow-up-right-from-square"></i>
+                                                </a>
+                                            </div>
+                                            <div class="project-pdf-box">
+                                                <iframe src="assets/docs/11조_최종발표.pdf" title="DEEPLEARNING PDF Preview"></iframe>
+                                            </div>
+                                </div>
+                                <div class="tab-pane fade" id="links-4" role="tabpanel" aria-labelledby="links-tab-4">
+                                    <h5 class="project-section-title">Related Links</h5>
+                                            <div class="project-link-grid">
+                                                <a class="project-resource-card" href="https://github.com/ohhyunjun/Machine-Learning/tree/main/Team%20Project" target="_blank" rel="noopener">
+                                                    <span><i class="fas fa-link me-2"></i>GitHub Repository</span>
+                                                    <i class="fas fa-arrow-up-right-from-square"></i>
+                                                </a>
+                                            </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="text-center mt-5">
+                            <button class="btn btn-primary" data-bs-dismiss="modal">
+                                <i class="fas fa-xmark fa-fw"></i>
+                                Close Window
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="portfolio-modal modal fade" id="portfolioModal5" tabindex="-1" aria-labelledby="portfolioModalLabel5"
+        aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal"
+                        aria-label="Close"></button></div>
+                <div class="modal-body pb-5">
+                    <div class="container">
+                        <div class="text-center">
+                            <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0" id="portfolioModalLabel5">ICPC</h2>
+                            <p class="text-muted mt-2 mb-0">Algorithm · Parametric Search · Team Project</p>
+                            <div class="divider-custom">
+                                <div class="divider-custom-line"></div>
+                                <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                                <div class="divider-custom-line"></div>
+                            </div>
+                        </div>
+
+                        <div class="project-modal-layout">
+                            <div class="project-combined-card mb-4">
+                                    <div class="project-image-panel">
+                                        <img class="project-hero-image" src="assets/img/portfolio/ICPCLogo.png" alt="ICPC 대표 이미지" />
+                                    </div>
+                                    <div class="project-overview-body">
+                                        <h5 class="project-section-title">Project Overview</h5>
+                                            <p class="mb-3">2024 ICPC 아시아-서울 지역 대회의 기출문제인 Problem J (Street Development)를 효율적인 알고리즘으로 해결한 팀 프로젝트입니다.</p>
+                                            <p class="mb-3">일직선상에 정렬된 로봇들이 정보를 하나로 모으기 위해 필요한 최소 배터리 용량을 구하는 문제로, 매개변수 탐색(Parametric Search) 알고리즘을 도입했습니다.</p>
+                                            <p class="mb-3">특정 배터리 용량으로 모든 정보 수합이 가능한지 판별하기 위해 Prefix 및 Suffix 배열 기반의 O(N) 검증 로직을 고안했고, 전체 알고리즘을 O(N log L)의 시간 복잡도로 구현했습니다.</p>
+                                    </div>
+                                </div>
+
+                            <ul class="nav nav-tabs project-tabs" id="portfolioTab5" role="tablist">
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link active" id="docs-tab-5" data-bs-toggle="tab" data-bs-target="#docs-5" type="button" role="tab">Docs</button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="links-tab-5" data-bs-toggle="tab" data-bs-target="#links-5" type="button" role="tab">Links</button>
+                                </li>
+                            </ul>
+
+                            <div class="tab-content project-tab-panel" id="portfolioTabContent5">
+                                <div class="tab-pane fade show active" id="docs-5" role="tabpanel" aria-labelledby="docs-tab-5">
+                                    <h5 class="project-section-title">Documents</h5>
+                                            <div class="project-doc-grid mb-3">
+                                                <a class="project-resource-card" href="assets\docs\알고리즘 및 실습 3조 최종 보고서.pdf" target="_blank" rel="noopener">
+                                                    <span><i class="fas fa-file-pdf me-2"></i>최종 보고서</span>
+                                                    <i class="fas fa-arrow-up-right-from-square"></i>
+                                                </a>
+                                            </div>
+                                            <div class="project-pdf-box">
+                                                <iframe id="pdf-frame-5" src="assets\docs\알고리즘 및 실습 3조 최종 보고서.pdf" title="ICPC PDF Preview"></iframe>
+                                            </div>
+                                </div>
+                                <div class="tab-pane fade" id="links-5" role="tabpanel" aria-labelledby="links-tab-5">
+                                    <h5 class="project-section-title">Related Links</h5>
+                                            <div class="project-link-grid">
+                                                <a class="project-resource-card" href="https://github.com/ohhyunjun/Algorithm-Design-Challenges" target="_blank" rel="noopener">
+                                                    <span><i class="fas fa-link me-2"></i>GitHub Repository</span>
+                                                    <i class="fas fa-arrow-up-right-from-square"></i>
+                                                </a>
+                                            </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="text-center mt-5">
+                            <button class="btn btn-primary" data-bs-dismiss="modal">
+                                <i class="fas fa-xmark fa-fw"></i>
+                                Close Window
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="portfolio-modal modal fade" id="portfolioModal6" tabindex="-1" aria-labelledby="portfolioModalLabel6"
+        aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal"
+                        aria-label="Close"></button></div>
+                <div class="modal-body pb-5">
+                    <div class="container">
+                        <div class="text-center">
+                            <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0" id="portfolioModalLabel6">AI Co-pilot for Fish-shell</h2>
+                            <p class="text-muted mt-2 mb-0">AI Assistant for Fish-shell</p>
+                            <div class="divider-custom">
+                                <div class="divider-custom-line"></div>
+                                <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                                <div class="divider-custom-line"></div>
+                            </div>
+                        </div>
+
+                        <div class="project-modal-layout">
+                            <div class="project-combined-card mb-4">
+                                    <div class="project-image-panel">
+                                        <img class="project-hero-image" src="assets/img/portfolio/fish_shell_gemini.png" alt="AI Co-pilot for Fish-shell 대표 이미지" />
+                                    </div>
+                                    <div class="project-overview-body">
+                                        <h5 class="project-section-title">Project Overview</h5>
+                                            <p class="mb-3">
+                                                가장 스마트한 규칙 기반(Rule-based) 셸로 평가받는 Fish-shell에 Gemini 2.5 Flash AI 엔진을
+                                                직접 이식하여, 자연어 의도를 이해하는 지능형 Co-pilot으로 진화시킨 오픈소스 기여 프로젝트입니다.
+                                                기존 셸이 문맥을 이해하지 못하고 에러 발생 후에야 반응하는 한계를 극복하는 것을 목표로 했습니다.
+                                            </p>
+                                            <p class="mb-3">
+                                                Linux(WSL Ubuntu 22.04) 환경에서 Rust(Frontend) — FFI Bridge — C++(Backend) 3계층
+                                                하이브리드 아키텍처를 설계했습니다. Rust는 셸 이벤트 루프 내 키보드 인터럽트 후킹과 ANSI
+                                                Escape Code 기반 오버레이 UI를 담당하고, C++ 백엔드는 libcurl을 통한 Gemini API 비동기 통신,
+                                                동적 프롬프트 생성, JSON 파싱을 전담합니다. FFI Bridge는 두 언어 간 Raw Pointer 기반 메모리
+                                                수명 주기(할당 → 사용 → 해제)를 명시적으로 관리하여 메모리 누수를 차단했습니다.
+                                            </p>
+                                            <p class="mb-3">
+                                                Alt+W(문맥 기반 명령어 자동생성), Alt+Q(복잡한 명령어 즉시 해설), Alt+R(실행 전 위험 선제 진단)
+                                                3가지 핵심 기능을 구현했으며, 6,000줄 규모의 reader.rs를 분석하여 총 739라인을 추가하고
+                                                12번의 코어 커밋으로 기여했습니다.
+                                            </p>
+                                    </div>
+                                </div>
+
+                            <ul class="nav nav-tabs project-tabs" id="portfolioTab6" role="tablist">
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link active" id="demo-tab-6" data-bs-toggle="tab" data-bs-target="#demo-6" type="button" role="tab">Demo</button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="docs-tab-6" data-bs-toggle="tab" data-bs-target="#docs-6" type="button" role="tab">Docs</button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="links-tab-6" data-bs-toggle="tab" data-bs-target="#links-6" type="button" role="tab">Links</button>
+                                </li>
+                            </ul>
+
+                            <div class="tab-content project-tab-panel" id="portfolioTabContent6">
+                                <div class="tab-pane fade show active" id="demo-6" role="tabpanel" aria-labelledby="demo-tab-6">
+                                    <h5 class="project-section-title">Demo Video</h5>
+                                            <div class="project-video-box mb-3">
+                                                <video controls preload="metadata">
+                                                    <source src="assets/videos/fish_shell.mp4" type="video/mp4" />
+                                                    현재 브라우저에서 video 태그를 지원하지 않습니다.
+                                                </video>
+                                            </div>
+                                </div>
+                                <div class="tab-pane fade" id="docs-6" role="tabpanel" aria-labelledby="docs-tab-6">
+                                    <h5 class="project-section-title">Documents</h5>
+                                            <div class="project-doc-grid mb-3">
+                                                <a class="project-resource-card" href="assets\docs\알고리즘 및 실습 3조 최종 보고서.pdf" target="_blank" rel="noopener">
+                                                    <span><i class="fas fa-file-pdf me-2"></i>최종 보고서</span>
+                                                    <i class="fas fa-arrow-up-right-from-square"></i>
+                                                </a>
+                                            </div>
+                                            <div class="project-pdf-box">
+                                                <iframe id="pdf-frame-5" src="assets\docs\fish_shell.pdf" title="ICPC PDF Preview"></iframe>
+                                            </div>
+                                </div>
+                                <div class="tab-pane fade" id="links-6" role="tabpanel" aria-labelledby="links-tab-6">
+                                    <h5 class="project-section-title">Related Links</h5>
+                                            <div class="project-link-grid">
+                                                <a class="project-resource-card" href="https://github.com/ohhyunjun/fish-shell.git" target="_blank" rel="noopener">
+                                                    <span><i class="fas fa-link me-2"></i>GitHub Repository</span>
+                                                    <i class="fas fa-arrow-up-right-from-square"></i>
+                                                </a>
+                                            </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="text-center mt-5">
+                            <button class="btn btn-primary" data-bs-dismiss="modal">
+                                <i class="fas fa-xmark fa-fw"></i>
+                                Close Window
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="portfolio-modal modal fade" id="portfolioModal7" tabindex="-1" aria-labelledby="portfolioModalLabel7"
+        aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal"
+                        aria-label="Close"></button></div>
+                <div class="modal-body pb-5">
+                    <div class="container">
+                        <div class="text-center">
+                            <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0" id="portfolioModalLabel7">Automated Fine Dust-Blocking Blinds</h2>
+                            <p class="text-muted mt-2 mb-0">IoT · Arduino · Smart Home</p>
+                            <div class="divider-custom">
+                                <div class="divider-custom-line"></div>
+                                <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                                <div class="divider-custom-line"></div>
+                            </div>
+                        </div>
+
+                        <div class="project-modal-layout">
+                            <div class="project-combined-card mb-4">
+                                    <div class="project-image-panel">
+                                        <img class="project-hero-image" src="assets/img/portfolio/smartblind_img2.png" alt="Automated Fine Dust-Blocking Blinds 대표 이미지" />
+                                    </div>
+                                    <div class="project-overview-body">
+                                        <h5 class="project-section-title">Project Overview</h5>
+                                            <p class="mb-3">팀 B조 KKOY의 미세먼지 차단 자동 블라인드 프로젝트는 블라인드에 방충망과 필터 천을 결합하고, 미세먼지·온습도 센서로 실시간 데이터를 수집·시각화하여 기준 농도 이상 시 자동으로 블라인드를 제어하는 시스템입니다.</p>
+                                            <p class="mb-3">1~2주차에 부품 선정과 모형 제작을 완료했고, 3주차부터 센서·모터 회로 설계 및 아두이노 코딩을 병행했습니다. 서보모터 개조로 360도 회전을 가능하게 하여 최종 주차에 프로토타입을 완성했습니다.</p>
+                                            <p class="mb-3">저는 아두이노 코딩을 담당하며 기술적 한계를 세분화하고, 팀원들과 협의하여 대체 방안을 실험하는 과정에서 융합적 사고와 커뮤니케이션 역량을 기를 수 있었습니다.</p>
+                                    </div>
+                                </div>
+
+                            <ul class="nav nav-tabs project-tabs" id="portfolioTab7" role="tablist">
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link active" id="demo-tab-7" data-bs-toggle="tab" data-bs-target="#demo-7" type="button" role="tab">Demo</button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="docs-tab-7" data-bs-toggle="tab" data-bs-target="#docs-7" type="button" role="tab">Docs</button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="links-tab-7" data-bs-toggle="tab" data-bs-target="#links-7" type="button" role="tab">Links</button>
+                                </li>
+                            </ul>
+
+                            <div class="tab-content project-tab-panel" id="portfolioTabContent7">
+                                <div class="tab-pane fade show active" id="demo-7" role="tabpanel" aria-labelledby="demo-tab-7">
+                                    <h5 class="project-section-title">Demo Video</h5>
+                                            <div class="project-video-box mb-3">
+                                                <iframe
+                                                    src="https://www.youtube.com/embed/QfcbJ4eO6K4"
+                                                    title="Automated Fine Dust-Blocking Blinds Demo"
+                                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                                    allowfullscreen>
+                                                </iframe>
+                                            </div>
+                                </div>
+                                <div class="tab-pane fade" id="docs-7" role="tabpanel" aria-labelledby="docs-tab-7">
+                                    <h5 class="project-section-title">Documents</h5>
+                                            <div class="project-doc-grid mb-3">
+                                                <a class="project-resource-card" href="assets/docs/최종보고서(KKOY).pdf" target="_blank" rel="noopener">
+                                                    <span><i class="fas fa-file-pdf me-2"></i>최종 발표자료</span>
+                                                    <i class="fas fa-arrow-up-right-from-square"></i>
+                                                </a>
+                                            </div>
+                                            <div class="project-pdf-box">
+                                                <iframe src="assets/docs/최종보고서(KKOY).pdf" title="Automated Fine Dust-Blocking Blinds PDF Preview"></iframe>
+                                            </div>
+                                </div>
+                                <div class="tab-pane fade" id="links-7" role="tabpanel" aria-labelledby="links-tab-7">
+                                    <h5 class="project-section-title">Related Links</h5>
+                                            <div class="project-link-grid">
+                                                <a class="project-resource-card" href="https://github.com/ohhyunjun/KKOY.git" target="_blank" rel="noopener">
+                                                    <span><i class="fas fa-link me-2"></i>GitHub Repository</span>
+                                                    <i class="fas fa-arrow-up-right-from-square"></i>
+                                                </a>
+                                            </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="text-center mt-5">
+                            <button class="btn btn-primary" data-bs-dismiss="modal">
+                                <i class="fas fa-xmark fa-fw"></i>
+                                Close Window
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- ===================== portfolioModal8 ===================== -->
+    <div class="portfolio-modal modal fade" id="portfolioModal8" tabindex="-1" aria-labelledby="portfolioModalLabel8"
+        aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal"
+                        aria-label="Close"></button></div>
+                <div class="modal-body pb-5">
+                    <div class="container">
+                        <div class="text-center">
+                            <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0" id="portfolioModalLabel8">PLANTI</h2>
+                            <p class="text-muted mt-2 mb-0">IoT · AI · Smart Farm · Arduino · Spring Boot · YOLOv11</p>
+                            <div class="divider-custom">
+                                <div class="divider-custom-line"></div>
+                                <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                                <div class="divider-custom-line"></div>
+                            </div>
+                        </div>
+
+                        <div class="project-modal-layout">
+                            <div class="project-combined-card mb-4">
+                                <div class="project-image-panel project-image-panel--tall">
+                                    <img class="project-hero-image" src="assets/img/portfolio/planti_web.png" alt="Project 8 대표 이미지" />
+                                </div>
+                                <div class="project-overview-body">
+                                    <h5 class="project-section-title">Project Overview</h5>
+                                    <p class="mb-3">PLANTI는 Arduino 센서, Spring Boot 백엔드, YOLO 기반 AI를 결합한 개인 스마트팜 IoT 플랫폼입니다. 온도·습도·토양 수분 데이터를 실시간으로 모니터링하고, AI가 식물 상태를 분석해 생장 환경 조언·병해 진단·AI 아트 생성 기능을 제공합니다.</p>
+                                    <p class="mb-3">Arduino로 수집한 센서 데이터를 Spring Boot 백엔드와 연동하고, RESTful API 기반 기기 시리얼코드 등록, LED 조명 제어, 자동 급수, YOLO 기반 병해 진단, OpenAI API를 활용한 재배 조언까지 구현했습니다. 식물 성장 일지, 커뮤니티 게시판도 포함한 풀스택 서비스입니다.</p>
+                                    <p class="mb-3">백엔드 설계 및 ERD 구성, Arduino-서버 연동 통신 구조 설계, YOLO 모델 통합까지 담당했습니다. IoT 데이터 파이프라인 전 흐름과 AI API 실서비스 통합 과정을 직접 경험했고, 이후 GrowLab 수경재배 플랫폼으로 고도화하는 기반이 된 프로젝트입니다.</p>
+                                </div>
+                            </div>
+
+                            <ul class="nav nav-tabs project-tabs" id="portfolioTab8" role="tablist">
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link active" id="demo-tab-8" data-bs-toggle="tab" data-bs-target="#demo-8" type="button" role="tab">Demo</button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="docs-tab-8" data-bs-toggle="tab" data-bs-target="#docs-8" type="button" role="tab">Docs</button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="links-tab-8" data-bs-toggle="tab" data-bs-target="#links-8" type="button" role="tab">Links</button>
+                                </li>
+                            </ul>
+
+                            <div class="tab-content project-tab-panel" id="portfolioTabContent8">
+                                <div class="tab-pane fade show active" id="demo-8" role="tabpanel" aria-labelledby="demo-tab-8">
+                                    <h5 class="project-section-title">Demo Video</h5>
+                                    <div class="project-video-dual">
+                                        <div>
+                                            <p class="project-section-title">웹서비스 기능</p>
+                                            <div class="project-video-box">
+                                                <video controls preload="metadata">
+                                                    <source src="assets/videos/planti_웹서비스_기능영상.mp4" type="video/mp4" />
+                                                    현재 브라우저에서 video 태그를 지원하지 않습니다.
+                                                </video>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <p class="project-section-title">회로 영상</p>
+                                            <div class="project-video-box">
+                                                <video controls preload="metadata">
+                                                    <source src="assets/videos/planti_회로_영상.mp4" type="video/mp4" />
+                                                    현재 브라우저에서 video 태그를 지원하지 않습니다.
+                                                </video>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade" id="docs-8" role="tabpanel" aria-labelledby="docs-tab-8">
+                                    <h5 class="project-section-title">Documents</h5>
+                                    <div class="project-doc-grid mb-3">
+                                                <a class="project-resource-card" href="assets/docs/플랜티_최종.pdf" target="_blank" rel="noopener">
+                                                    <span><i class="fas fa-file-pdf me-2"></i>최종 발표자료</span>
+                                                    <i class="fas fa-arrow-up-right-from-square"></i>
+                                                </a>
+                                            </div>
+                                            <div class="project-pdf-box">
+                                                <iframe src="assets/docs/플랜티_최종.pdf" title="PLANTI PDF Preview"></iframe>
+                                            </div>
+                                </div>
+                                <div class="tab-pane fade" id="links-8" role="tabpanel" aria-labelledby="links-tab-8">
+                                    <h5 class="project-section-title">Related Links</h5>
+                                        <div class="project-link-grid">
+                                                <a class="project-resource-card" href="https://github.com/ohhyunjun/PLANTI_Project_BE.git" target="_blank" rel="noopener">
+                                                    <span><i class="fas fa-link me-2"></i>GitHub PLANTI Backend</span>
+                                                    <i class="fas fa-arrow-up-right-from-square"></i>
+                                                </a>
+                                        </div>
+                                        <div class="project-link-grid">
+                                                <a class="project-resource-card" href="https://github.com/ohhyunjun/PLANTI_Project_FE.git" target="_blank" rel="noopener">
+                                                    <span><i class="fas fa-link me-2"></i>GitHub PLANTI Frontend</span>
+                                                    <i class="fas fa-arrow-up-right-from-square"></i>
+                                                </a>
+                                        </div>
+                                        <div class="project-link-grid">
+                                                <a class="project-resource-card" href="https://github.com/ohhyunjun/PLANTI_Project_Arduino.git" target="_blank" rel="noopener">
+                                                    <span><i class="fas fa-link me-2"></i>GitHub PLANTI Arduino</span>
+                                                    <i class="fas fa-arrow-up-right-from-square"></i>
+                                                </a>
+                                        </div>
+                                        <div class="project-link-grid">
+                                                <a class="project-resource-card" href="https://drive.google.com/drive/folders/1kO5XDMxCT2W1wd7HT7UMo_F4G-N_8fmg?usp=sharing" target="_blank" rel="noopener">
+                                                    <span><i class="fas fa-link me-2"></i>Google Drive PLANTI</span>
+                                                    <i class="fas fa-arrow-up-right-from-square"></i>
+                                                </a>
+                                        </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="text-center mt-5">
+                            <button class="btn btn-primary" data-bs-dismiss="modal">
+                                <i class="fas fa-xmark fa-fw"></i>
+                                Close Window
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===================== portfolioModal9 ===================== -->
+    <div class="portfolio-modal modal fade" id="portfolioModal9" tabindex="-1" aria-labelledby="portfolioModalLabel9"
+        aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal"
+                        aria-label="Close"></button></div>
+                <div class="modal-body pb-5">
+                    <div class="container">
+                        <div class="text-center">
+                            <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0" id="portfolioModalLabel9">Project Title 9</h2>
+                            <p class="text-muted mt-2 mb-0">태그1 · 태그2 · 태그3</p>
+                            <div class="divider-custom">
+                                <div class="divider-custom-line"></div>
+                                <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                                <div class="divider-custom-line"></div>
+                            </div>
+                        </div>
+
+                        <div class="project-modal-layout">
+                            <div class="project-combined-card mb-4">
+                                <div class="project-image-panel">
+                                    <img class="project-hero-image" src="assets/img/portfolio/project9.png" alt="Project 9 대표 이미지" />
+                                </div>
+                                <div class="project-overview-body">
+                                    <h5 class="project-section-title">Project Overview</h5>
+                                    <p class="mb-3">프로젝트 설명을 여기에 입력하세요.</p>
+                                    <p class="mb-3">개발 과정 및 주요 기능을 여기에 입력하세요.</p>
+                                    <p class="mb-3">본인의 역할 및 배운 점을 여기에 입력하세요.</p>
+                                </div>
+                            </div>
+
+                            <ul class="nav nav-tabs project-tabs" id="portfolioTab9" role="tablist">
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link active" id="demo-tab-9" data-bs-toggle="tab" data-bs-target="#demo-9" type="button" role="tab">Demo</button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="docs-tab-9" data-bs-toggle="tab" data-bs-target="#docs-9" type="button" role="tab">Docs</button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="links-tab-9" data-bs-toggle="tab" data-bs-target="#links-9" type="button" role="tab">Links</button>
+                                </li>
+                            </ul>
+
+                            <div class="tab-content project-tab-panel" id="portfolioTabContent9">
+                                <div class="tab-pane fade show active" id="demo-9" role="tabpanel" aria-labelledby="demo-tab-9">
+                                    <h5 class="project-section-title">Demo Video</h5>
+                                    <p class="project-empty">데모 영상을 여기에 추가하세요. (<code>video</code> 또는 YouTube <code>iframe</code>)</p>
+                                </div>
+                                <div class="tab-pane fade" id="docs-9" role="tabpanel" aria-labelledby="docs-tab-9">
+                                    <h5 class="project-section-title">Documents</h5>
+                                    <p class="project-empty">관련 문서를 여기에 추가하세요.</p>
+                                </div>
+                                <div class="tab-pane fade" id="links-9" role="tabpanel" aria-labelledby="links-tab-9">
+                                    <h5 class="project-section-title">Related Links</h5>
+                                    <div class="project-link-grid">
+                                        <a class="project-resource-card" href="#" target="_blank" rel="noopener">
+                                            <span><i class="fas fa-link me-2"></i>GitHub Repository</span>
+                                            <i class="fas fa-arrow-up-right-from-square"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="text-center mt-5">
+                            <button class="btn btn-primary" data-bs-dismiss="modal">
+                                <i class="fas fa-xmark fa-fw"></i>
+                                Close Window
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===================== portfolioModal10 ===================== -->
+    <div class="portfolio-modal modal fade" id="portfolioModal10" tabindex="-1" aria-labelledby="portfolioModalLabel10"
+        aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal"
+                        aria-label="Close"></button></div>
+                <div class="modal-body pb-5">
+                    <div class="container">
+                        <div class="text-center">
+                            <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0" id="portfolioModalLabel10">Project Title 10</h2>
+                            <p class="text-muted mt-2 mb-0">태그1 · 태그2 · 태그3</p>
+                            <div class="divider-custom">
+                                <div class="divider-custom-line"></div>
+                                <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                                <div class="divider-custom-line"></div>
+                            </div>
+                        </div>
+
+                        <div class="project-modal-layout">
+                            <div class="project-combined-card mb-4">
+                                <div class="project-image-panel">
+                                    <img class="project-hero-image" src="assets/img/portfolio/project10.png" alt="Project 10 대표 이미지" />
+                                </div>
+                                <div class="project-overview-body">
+                                    <h5 class="project-section-title">Project Overview</h5>
+                                    <p class="mb-3">프로젝트 설명을 여기에 입력하세요.</p>
+                                    <p class="mb-3">개발 과정 및 주요 기능을 여기에 입력하세요.</p>
+                                    <p class="mb-3">본인의 역할 및 배운 점을 여기에 입력하세요.</p>
+                                </div>
+                            </div>
+
+                            <ul class="nav nav-tabs project-tabs" id="portfolioTab10" role="tablist">
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link active" id="demo-tab-10" data-bs-toggle="tab" data-bs-target="#demo-10" type="button" role="tab">Demo</button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="docs-tab-10" data-bs-toggle="tab" data-bs-target="#docs-10" type="button" role="tab">Docs</button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="links-tab-10" data-bs-toggle="tab" data-bs-target="#links-10" type="button" role="tab">Links</button>
+                                </li>
+                            </ul>
+
+                            <div class="tab-content project-tab-panel" id="portfolioTabContent10">
+                                <div class="tab-pane fade show active" id="demo-10" role="tabpanel" aria-labelledby="demo-tab-10">
+                                    <h5 class="project-section-title">Demo Video</h5>
+                                    <p class="project-empty">데모 영상을 여기에 추가하세요. (<code>video</code> 또는 YouTube <code>iframe</code>)</p>
+                                </div>
+                                <div class="tab-pane fade" id="docs-10" role="tabpanel" aria-labelledby="docs-tab-10">
+                                    <h5 class="project-section-title">Documents</h5>
+                                    <p class="project-empty">관련 문서를 여기에 추가하세요.</p>
+                                </div>
+                                <div class="tab-pane fade" id="links-10" role="tabpanel" aria-labelledby="links-tab-10">
+                                    <h5 class="project-section-title">Related Links</h5>
+                                    <div class="project-link-grid">
+                                        <a class="project-resource-card" href="#" target="_blank" rel="noopener">
+                                            <span><i class="fas fa-link me-2"></i>GitHub Repository</span>
+                                            <i class="fas fa-arrow-up-right-from-square"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="text-center mt-5">
+                            <button class="btn btn-primary" data-bs-dismiss="modal">
+                                <i class="fas fa-xmark fa-fw"></i>
+                                Close Window
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="js/scripts.js"></script>
     <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
