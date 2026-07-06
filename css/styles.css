@@ -11472,6 +11472,12 @@ footer.footer h4 {
     color: #ccd6f6 !important;
 }
 
+/* 모든 프로젝트 모달: 탭 내용 박스 ↔ Close 버튼 간격을
+   deeplearning 모달 기준(3rem, = Bootstrap mt-5)으로 통일 */
+.portfolio-modal .project-modal-layout + .text-center {
+    margin-top: 3rem !important;
+}
+
 /* 비디오 & PDF 박스 */
 .project-video-box,
 .project-pdf-box {
