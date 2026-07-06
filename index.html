@@ -167,7 +167,7 @@
                             <div class="portfolio-item-caption-content text-center text-white"><i
                                     class="fas fa-plus fa-3x"></i></div>
                         </div>
-                        <img class="img-fluid" src="assets/img/portfolio/project9.png" alt="Project 9" />
+                        <img class="img-fluid" src="assets/img/portfolio/db_team6_logo.png" alt="Project 9" />
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-4 mb-4 mb-md-0">
@@ -971,7 +971,7 @@
                     <div class="container">
                         <div class="text-center">
                             <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0" id="portfolioModalLabel9">Project Title 9</h2>
-                            <p class="text-muted mt-2 mb-0">태그1 · 태그2 · 태그3</p>
+                            <p class="text-muted mt-2 mb-0">PHP · Oracle DB · 청년주택 공고 서비스</p>
                             <div class="divider-custom">
                                 <div class="divider-custom-line"></div>
                                 <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
@@ -982,13 +982,13 @@
                         <div class="project-modal-layout">
                             <div class="project-combined-card mb-4">
                                 <div class="project-image-panel">
-                                    <img class="project-hero-image" src="assets/img/portfolio/project9.png" alt="Project 9 대표 이미지" />
+                                    <img class="project-hero-image" src="assets/img/portfolio/db_team.png" alt="Project 9 대표 이미지" />
                                 </div>
                                 <div class="project-overview-body">
                                     <h5 class="project-section-title">Project Overview</h5>
-                                    <p class="mb-3">프로젝트 설명을 여기에 입력하세요.</p>
-                                    <p class="mb-3">개발 과정 및 주요 기능을 여기에 입력하세요.</p>
-                                    <p class="mb-3">본인의 역할 및 배운 점을 여기에 입력하세요.</p>
+                                    <p class="mb-3">세종시 청년 대상 임대주택 공고 정보가 여러 플랫폼에 분산되어 비교가 어렵다는 문제를 해결하기 위해, PHP와 Oracle DB를 활용한 공고 통합 조회·비교 웹 서비스를 팀 프로젝트로 개발하였습니다.</p>
+                                    <p class="mb-3">USER_TABLE, USERPROFILE, HOUSINGPOST, HOUSEDETAIL, ELIGIBILITYCRITERIA 등 7개 테이블을 설계하고, ON DELETE CASCADE 및 트랜잭션(OCI_NO_AUTO_COMMIT / oci_commit)을 적용하여 데이터 무결성과 원자성을 보장하였습니다. 공고 등록 시 RETURNING 절로 자동 생성된 PK를 즉시 하위 테이블 INSERT에 연결하는 방식도 직접 구현하였습니다.</p>
+                                    <p class="mb-3">본인은 DB 모델링·테이블 설계 및 홈페이지 구현 전반에 참여하였으며, 유형·지역·기간·진행상태를 조합하는 동적 WHERE 절 필터링, 다중 JOIN 기반 공고 목록·마이페이지·관심공고 조회 쿼리, CEIL(FINISH_DATE - SYSDATE) D-Day 계산 등 핵심 쿼리를 작성하였습니다.</p>
                                 </div>
                             </div>
 
@@ -1007,16 +1007,29 @@
                             <div class="tab-content project-tab-panel" id="portfolioTabContent9">
                                 <div class="tab-pane fade show active" id="demo-9" role="tabpanel" aria-labelledby="demo-tab-9">
                                     <h5 class="project-section-title">Demo Video</h5>
-                                    <p class="project-empty">데모 영상을 여기에 추가하세요. (<code>video</code> 또는 YouTube <code>iframe</code>)</p>
+                                    <div class="project-video-box">
+                                        <video controls preload="metadata">
+                                            <source src="assets/videos/team6.mp4" type="video/mp4" />
+                                            현재 브라우저에서 video 태그를 지원하지 않습니다.
+                                        </video>
+                                    </div>
                                 </div>
                                 <div class="tab-pane fade" id="docs-9" role="tabpanel" aria-labelledby="docs-tab-9">
                                     <h5 class="project-section-title">Documents</h5>
-                                    <p class="project-empty">관련 문서를 여기에 추가하세요.</p>
+                                    <div class="project-doc-grid mb-3">
+                                        <a class="project-resource-card" href="assets/docs/DB2025_TEAM6(최종본).pdf" target="_blank" rel="noopener">
+                                            <span><i class="fas fa-file-pdf me-2"></i>최종 발표자료</span>
+                                            <i class="fas fa-arrow-up-right-from-square"></i>
+                                        </a>
+                                    </div>
+                                    <div class="project-pdf-box">
+                                        <iframe src="assets/docs/DB2025_TEAM6(최종본).pdf" title="DB Team6 PDF Preview"></iframe>
+                                    </div>
                                 </div>
                                 <div class="tab-pane fade" id="links-9" role="tabpanel" aria-labelledby="links-tab-9">
                                     <h5 class="project-section-title">Related Links</h5>
                                     <div class="project-link-grid">
-                                        <a class="project-resource-card" href="#" target="_blank" rel="noopener">
+                                        <a class="project-resource-card" href="https://github.com/ohhyunjun/Database-And-Exercise.git" target="_blank" rel="noopener">
                                             <span><i class="fas fa-link me-2"></i>GitHub Repository</span>
                                             <i class="fas fa-arrow-up-right-from-square"></i>
                                         </a>
@@ -1096,6 +1109,7 @@
                                         <a class="project-resource-card" href="#" target="_blank" rel="noopener">
                                             <span><i class="fas fa-link me-2"></i>GitHub Repository</span>
                                             <i class="fas fa-arrow-up-right-from-square"></i>
+                                        </div>
                                         </a>
                                     </div>
                                 </div>
