@@ -1,15 +1,5 @@
 @charset "UTF-8";
-/*!
-* Start Bootstrap - Freelancer v7.0.7 (https://startbootstrap.com/theme/freelancer)
-* Copyright 2013-2023 Start Bootstrap
-* Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-freelancer/blob/master/LICENSE)
-*/
-/*!
- * Bootstrap  v5.2.3 (https://getbootstrap.com/)
- * Copyright 2011-2022 The Bootstrap Authors
- * Copyright 2011-2022 Twitter, Inc.
- * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
- */
+
 :root {
     --main-blue: #5B7FFF;
     --neon-pink: #FF58A6;
@@ -11091,6 +11081,8 @@ header.masthead {
     transition: box-shadow .19s, transform .11s;
     border: none;
     overflow: hidden;
+    min-height: 285px;
+    text-decoration: none;
 }
 .portfolio .portfolio-item:hover {
     box-shadow: 0 10px 28px #FF58A63A, 0 2px 20px #5B7FFF22;
@@ -11098,6 +11090,47 @@ header.masthead {
 }
 .portfolio .portfolio-item .portfolio-item-caption {
     background-color: rgba(91, 127, 255, 0.9);
+}
+
+.portfolio .portfolio-grid .col-md-6 {
+    display: flex;
+    justify-content: center;
+}
+
+.portfolio .portfolio-item > .img-fluid {
+    width: 100%;
+    height: 180px;
+    object-fit: contain;
+    padding: 1.25rem;
+    background: #fff;
+}
+
+.portfolio-card-copy {
+    min-height: 105px;
+    padding: 1rem 1.1rem 1.15rem;
+    background: #fff;
+}
+
+.portfolio-card-copy h3 {
+    margin: 0 0 0.45rem;
+    color: var(--text-main) !important;
+    font-size: 1rem;
+    line-height: 1.25;
+    letter-spacing: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.portfolio-card-copy p {
+    margin: 0;
+    color: var(--text-sub);
+    font-size: 0.85rem;
+    line-height: 1.45;
+    font-weight: 500;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 /* 4. Buttons, Forms, Dividers */
