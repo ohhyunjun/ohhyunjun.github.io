@@ -69,19 +69,6 @@
             </div>
             <div class="row justify-content-center g-3 portfolio-grid" style="max-width: 1050px; margin: 0 auto;">
                 <div class="col-md-6 col-lg-4 mb-4">
-                    <button type="button" class="portfolio-item mx-auto d-block border-0 bg-transparent p-0 text-start"
-                        data-bs-toggle="modal" data-bs-target="#portfolioModal11" style="max-width: 300px;">
-                        <span class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100" aria-hidden="true">
-                            <span class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></span>
-                        </span>
-                        <img class="img-fluid rounded" src="assets/img/portfolio/sortiq-prototype.jpg" alt="SORTIQ 스마트 쓰레기통 시제품" />
-                        <span class="portfolio-card-copy d-block">
-                            <span class="h3 d-block">SORTIQ</span>
-                            <span>Edge AI 기반 스마트 쓰레기통</span>
-                        </span>
-                    </button>
-                </div>
-                <div class="col-md-6 col-lg-4 mb-4">
                     <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal1"
                         style="max-width: 300px;">
                         <div
@@ -1079,46 +1066,6 @@
                                 <i class="fas fa-xmark fa-fw"></i>
                                 Close Window
                             </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="portfolio-modal modal fade" id="portfolioModal11" tabindex="-1" aria-labelledby="portfolioModalLabel11"
-        aria-hidden="true">
-        <div class="modal-dialog modal-xl">
-            <div class="modal-content">
-                <div class="modal-header border-0">
-                    <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="닫기"></button>
-                </div>
-                <div class="modal-body pb-5">
-                    <div class="container">
-                        <div class="text-center">
-                            <h2 class="portfolio-modal-title text-secondary mb-0" id="portfolioModalLabel11">SORTIQ 스마트 쓰레기통</h2>
-                            <p class="text-muted mt-2 mb-0">Raspberry Pi 5 · YOLO · 초음파 센서 · MQTT</p>
-                            <p class="text-muted small mt-1 mb-4">Edge AI 기반 제조시스템 통합 설계 및 운영 전문가 양성과정 · 개인 프로젝트</p>
-                        </div>
-                        <div class="project-modal-layout">
-                            <div class="project-combined-card mb-4">
-                                <div class="project-image-panel">
-                                    <img class="project-hero-image" src="assets/img/portfolio/sortiq-prototype.jpg"
-                                        alt="Raspberry Pi 5와 회전판, 압축부를 연결한 스마트 쓰레기통 시제품" />
-                                </div>
-                                <div class="project-overview-body">
-                                    <h3 class="project-section-title">개발 내용</h3>
-                                    <p>분리배출과 수거 시점 확인을 돕기 위해 재활용품 분류, 수거통 적재율 측정, 웹 모니터링을 하나의 장치에 연결했습니다.</p>
-                                    <ul class="mb-3">
-                                        <li><strong>자동 분류와 회전</strong> · Raspberry Pi 5에서 YOLO로 캔·플라스틱·종이를 인식하고, 신뢰도 70% 이상이면 회전판을 제어해 해당 수거통을 투입 위치에 맞췄습니다.</li>
-                                        <li><strong>적재율과 조건부 압축</strong> · 초음파 거리 측정을 9회 시도해 유효값의 중앙값을 사용했습니다. 자동 분류 후 적재율이 50% 이상이면 조건에 따라 압축하고 재측정했습니다. 가득 찼거나 유효한 측정값을 얻지 못하면 압축을 건너뜁니다.</li>
-                                        <li><strong>웹과 기기의 양방향 통신</strong> · 웹에서 수거통 한 개 또는 세 개 전체의 측정을 요청하고, 기기가 MQTT로 보낸 결과를 웹 게이지에 표시했습니다. 주기 및 원격 측정은 상태 확인에 사용했습니다.</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="text-center mt-4">
-                            <button class="btn btn-primary" type="button" data-bs-dismiss="modal">닫기</button>
                         </div>
                     </div>
                 </div>
